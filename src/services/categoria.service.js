@@ -9,4 +9,9 @@ export class CategoriaService {
       return { message: error.message };
     }
   }
+
+  static async listar() {
+    const categorias = await Categoria.find().sort({ nombre: "asc" });
+    return categorias;
+  }
 }

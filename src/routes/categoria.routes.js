@@ -1,8 +1,15 @@
 import { Router } from "express";
-import { crearCategoria } from "../controller/categoria.controller.js";
+import {
+  crearCategoria,
+  getCategorias,
+} from "../controller/categoria.controller.js";
 
 export const categoriaRouter = Router();
 
-categoriaRouter.route("/categoria").post(crearCategoria).get().put();
+categoriaRouter
+  .route("/categoria")
+  .post(crearCategoria)
+  .get(getCategorias)
+  .put();
 
 categoriaRouter.route("/categoria/:id").get();
