@@ -78,4 +78,9 @@ export class PagoService {
       };
     }
   }
+
+  static recibirNotificacion(data) {
+    console.log("La data es: ");
+    console.log(data);
+  }
 }
